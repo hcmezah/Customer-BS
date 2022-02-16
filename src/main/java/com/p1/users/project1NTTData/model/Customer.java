@@ -15,8 +15,8 @@ public class Customer {
     private String name;
     private String lastName;
     private String nroDocument;
-    private String client;
-    private String typeClient;
+    private String type;
+    private String subType;
 
 
 }

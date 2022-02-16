@@ -20,7 +20,7 @@ public class ControllerCustomer {
 
     @GetMapping("/{id}")
     public Mono<Customer> getCustomer(@PathVariable("id") String id) {
-        return service.findById(id);
+        return service.findByNumDoc(id);
     }
 
     @PostMapping

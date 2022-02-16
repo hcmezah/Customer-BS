@@ -35,7 +35,7 @@ public class ServiceCustomerImpl implements ServiceCustomer {
                 tipoCliente ="E";
                 break;
         }
-        customer.setClient(tipoCliente);
+        customer.setType(tipoCliente);
 
 
         return repository.save(customer);
@@ -50,5 +50,10 @@ public class ServiceCustomerImpl implements ServiceCustomer {
     public void delete(String id) {
         repository.deleteById(id).subscribe();
 
+    }
+
+    @Override
+    public Mono<Customer> findByNumDoc(String numDoc) {
+        return this.repository.findByNroDocument(numDoc);
     }
 }

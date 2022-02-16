@@ -10,5 +10,6 @@ public interface ServiceCustomer {
     public Mono<Customer> save(Customer psc);
     public Mono<Customer> update(Customer psc);
     public void delete(String id);
+    public Mono<Customer> findByNumDoc(String numDoc);
 
 }
